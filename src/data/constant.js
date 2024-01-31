@@ -1,5 +1,5 @@
 export const Bio = {
-    name: "Rishav Chanda",
+    name: "Temidayo Oyewo",
     roles: [
       "Full Stack Developer",
       "Android & iOS Developer - Flutter",
