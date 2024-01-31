@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Bio} from "../../data/constant"
 import Typewriter from "typewriter-effect"
+import Temidayo from "../../images/temidayo.jpg"
 
 const HeroContainer = styled.div`
   background-color: ${({theme})=>theme.card_light};
@@ -178,6 +179,26 @@ const ResumeButton = styled.a`
 
 `;
 
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 15px;
+  max-height: 380px;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid ${({theme})=>theme.primary};
+  @media screen and (max-width: 960px) {
+    max-height: 400px;
+    max-width: 400px;
+  }
+
+  @media screen and (max-width: 640px) {
+    max-height: 300px;
+  }
+`;
+
 const Hero = () => {
   return (
     <div id='about'>
@@ -202,7 +223,9 @@ const Hero = () => {
             </SubTitle>
             <ResumeButton href={Bio.resume} target="_blank">Check resume</ResumeButton>
           </HeroLeftContainer>
-          <HeroRightContainer></HeroRightContainer>
+          <HeroRightContainer>
+            <Image src={Temidayo}></Image>
+          </HeroRightContainer>
         </HeroInnerConatiner>
       </HeroContainer>
     </div>
