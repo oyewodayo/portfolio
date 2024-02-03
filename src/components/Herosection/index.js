@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {Bio} from "../../data/constant"
 import Typewriter from "typewriter-effect"
 import Temidayo from "../../images/temidayo.jpg"
+import HeroBgAnimation from '../HeroBgAnimation'
 
 const HeroContainer = styled.div`
   background-color: ${({theme})=>theme.card_light};
@@ -203,7 +204,9 @@ const Hero = () => {
   return (
     <div id='about'>
       <HeroContainer>
-        <HeroBg></HeroBg>
+        <HeroBg>
+          <HeroBgAnimation/>
+        </HeroBg>
         <HeroInnerConatiner>
           <HeroLeftContainer>
             <Title>
@@ -224,7 +227,7 @@ const Hero = () => {
             <ResumeButton href={Bio.resume} target="_blank">Check resume</ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer>
-            <Image src={Temidayo}></Image>
+            <Image src={Temidayo} alt='Hero'></Image>
           </HeroRightContainer>
         </HeroInnerConatiner>
       </HeroContainer>
