@@ -175,7 +175,11 @@ const ResumeButton = styled.a`
     
     @media (max-width: 640px) {
         padding: 12px 0;
+        margin-bottom: 15px;
         font-size: 18px;
+        text-align:center;
+        align-items: center;
+        justify-content: center;
     } 
 
 `;

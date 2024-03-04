@@ -181,7 +181,7 @@ const Navbar = () => {
             <MobileLink href="#experience" onClick={()=>{setOpen(!open)}}>Experience</MobileLink>
             <MobileLink href="#projects" onClick={()=>{setOpen(!open)}}>Projects</MobileLink>
             <MobileLink href="#education" onClick={()=>{setOpen(!open)}}>Education</MobileLink>
-            <GithubButton style={{padding:"10px 16px", background:`${theme.primary}`,color:"white",width:"max-content"}} href="/" target="_blank">Github profile</GithubButton>
+            <GithubButton style={{padding:"10px 16px", background:`${theme.primary}`,color:"white",width:"max-content"}} href="https://github.com/oyewodayo" target="_blank">Github profile</GithubButton>
             </MobileMenu>}
     </Nav>
   )
