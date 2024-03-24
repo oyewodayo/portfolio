@@ -4,6 +4,8 @@ import {Bio} from "../../data/constant"
 import Typewriter from "typewriter-effect"
 import Temidayo from "../../images/temidayo.jpg"
 import HeroBgAnimation from '../HeroBgAnimation'
+import { motion } from "framer-motion"
+
 
 const HeroContainer = styled.div`
   background-color: ${({theme})=>theme.card_light};
@@ -73,7 +75,7 @@ const HeroLeftContainer = styled.div`
   }
 `;
 
-const HeroRightContainer = styled.div`
+const HeroRightContainer = styled(motion.div)`
   width:100% ;
   order: 2;
   display: flex;
@@ -184,7 +186,7 @@ const ResumeButton = styled.a`
 
 `;
 
-const Image = styled.img`
+const Image = styled(motion.img)`
   width: 100%;
   height: 100%;
   position: relative;
@@ -228,10 +230,20 @@ const Hero = () => {
             <SubTitle>
               {Bio.description}
             </SubTitle>
-            <ResumeButton href={Bio.resume} target="_blank">Check resume</ResumeButton>
+            <ResumeButton href={Bio.resume} target='display'>Check Resume</ResumeButton>
           </HeroLeftContainer>
-          <HeroRightContainer>
-            <Image src={Temidayo} alt='Hero'></Image>
+          <HeroRightContainer >
+            <Image 
+              as={motion.img} 
+              initial={{opacity:0, scale:0.5}} 
+              animate={{opacity:1, scale:1, x:20}} 
+              transition={{duration:3}} 
+              whileHover={{opacity:1,scale:0.8}}
+              drag
+              src={Temidayo} alt='Hero'
+            >
+              
+            </Image>
           </HeroRightContainer>
         </HeroInnerConatiner>
       </HeroContainer>

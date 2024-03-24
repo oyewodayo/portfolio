@@ -32,10 +32,6 @@ const Card = styled.div`
         transform: translateY(-5px);
     }
 
-    &:hover ${Document}{
-        display: flex;
-    }
-
     @media screen and (max-width: 768px) {
         padding: 10px;
         gap: 8px;
@@ -156,10 +152,7 @@ const ExperienceCard = ({experience}) => {
             </>
             )}
         </Description>
-        {experience.doc && (
-        <a href={experience.doc} target="new">
-            <Document src={experience.doc}></Document>
-        </a>)}
+       
     </Card>
   )
 }

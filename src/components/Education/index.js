@@ -12,6 +12,7 @@ justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;
+
 `;
 
 const Wrapper = styled.div`
@@ -23,6 +24,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   gap: 12px;
+  margin-bottom: 100px;
 `;
 
 const Title = styled.div`
@@ -61,7 +63,7 @@ const TimeLineSection = styled.div`
 
 const Education = () => {
   return (
-    <Container id="experience">
+    <Container id="education">
     <Wrapper>
         <Title>Education</Title>
         <Desc>Here are some of my projects</Desc>

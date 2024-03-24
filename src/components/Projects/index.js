@@ -93,7 +93,7 @@ const CardContainer = styled.div`
 const Projects = () => {
     const [toggle, setToggle] = useState("all");
   return (
-    <Container id="skills">
+    <Container id="projects">
     <Wrapper>
       <Title>Projects</Title>
       <Desc>
@@ -128,7 +128,7 @@ const Projects = () => {
               <ProjectCard project={project}/>
             ))}
           {projects
-            .filter((item) => item.category == toggle)
+            .filter((item) => item.category === toggle)
             .map((project) => (
               <ProjectCard project={project}/>
             ))}
