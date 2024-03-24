@@ -91,7 +91,7 @@ const ButtonContainer = styled.div`
     }
 `;
 
-const GithubButton = styled.div`
+const GithubButton = styled.a`
     background-color: transparent;
     color: ${({theme})=>theme.primary};
     border: 1.8px solid ${({theme})=>theme.primary};
@@ -102,6 +102,7 @@ const GithubButton = styled.div`
     padding: 0px 20px;
     font-size: 1rem;
     font-weight: 500;
+    text-decoration: none;
     cursor: pointer;
     height: 70%;
     &:hover{
@@ -156,9 +157,9 @@ const Navbar = () => {
         <NavContainer>
             <NavLogo to="/"> 
 
-            <a href='/' style={{display:"flex",alignItems:"center",color:"white",marginBottom:"20",cursor:"pointer"}}>
+            <a href='/' style={{display:"flex",alignItems:"center",textDecoration:'none', color:"white",marginBottom:"20",cursor:"pointer"}}>
 
-            <DiCssdeck size="3rem"/> <Span> Portfolio</Span>
+            <DiCssdeck size="3rem"/> <Span> Temidayo</Span>
             </a>
             </NavLogo>
             <MobileIcon>
@@ -172,7 +173,7 @@ const Navbar = () => {
                 <NavLink href='#education'>Education</NavLink>
             </NavItems>
             <ButtonContainer>
-                <GithubButton>Github profile</GithubButton>
+                <GithubButton href="https://github.com/oyewodayo" target='_blank'>Github profile</GithubButton>
             </ButtonContainer>
         </NavContainer>
         {open && <MobileMenu open={open}>
@@ -181,7 +182,7 @@ const Navbar = () => {
             <MobileLink href="#experience" onClick={()=>{setOpen(!open)}}>Experience</MobileLink>
             <MobileLink href="#projects" onClick={()=>{setOpen(!open)}}>Projects</MobileLink>
             <MobileLink href="#education" onClick={()=>{setOpen(!open)}}>Education</MobileLink>
-            <GithubButton style={{padding:"10px 16px", background:`${theme.primary}`,color:"white",width:"max-content"}} href="https://github.com/oyewodayo" target="_blank">Github profile</GithubButton>
+            <GithubButton href="https://github.com/oyewodayo" style={{padding:"10px 16px", background:`${theme.primary}`,color:"white",width:"max-content"}} target="_blank">Github profile</GithubButton>
             </MobileMenu>}
     </Nav>
   )

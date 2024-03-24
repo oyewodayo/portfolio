@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
-import { experiences } from '../../data/constant';
 import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator } from '@mui/lab';
-import ExperienceCard from '../Cards/ExperienceCard';
+import { education } from '../../data/constant';
+import EducationCard from '../Cards/EducationCard';
+
 
 const Container = styled.div`
 display: flex;
@@ -58,34 +59,34 @@ const TimeLineSection = styled.div`
 `;
 
 
-const Experience = () => {
+const Education = () => {
   return (
     <Container id="experience">
-        <Wrapper>
-            <Title>Experience</Title>
-            <Desc>Here are some of my projects</Desc>
-            <TimeLineSection>
-               <Timeline>
-                    {experiences.map((experience,index)=>(
-                    <TimelineItem>
-                        <TimelineSeparator>
-                          
-                            <TimelineDot variant='outlined' color='secondary'/>
-                            {index !== experiences.length - 1 && <TimelineConnector/>}
-                           
-                        </TimelineSeparator>
-                        
-                        <TimelineContent sx={{py:"12px",px:"2px"}}>
-                          
-                            <ExperienceCard experience={experience} />
-                        </TimelineContent>
-                    </TimelineItem>
-                    ))}
-               </Timeline>
-            </TimeLineSection>
-        </Wrapper>
-    </Container>
+    <Wrapper>
+        <Title>Education</Title>
+        <Desc>Here are some of my projects</Desc>
+        <TimeLineSection>
+           <Timeline>
+                {education.map((education,index)=>(
+                <TimelineItem>
+                    <TimelineSeparator>
+                      
+                        <TimelineDot variant='outlined' color='secondary'/>
+                        {index !== education.length - 1 && <TimelineConnector/>}
+
+                    </TimelineSeparator>
+                    
+                    <TimelineContent sx={{py:"12px",px:"2px"}}>
+                      
+                        <EducationCard education={education} />
+                    </TimelineContent>
+                </TimelineItem>
+                ))}
+           </Timeline>
+        </TimeLineSection>
+    </Wrapper>
+</Container>
   )
 }
 
-export default Experience
+export default Education
